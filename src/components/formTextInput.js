@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-let FormTextInput = (props) => {
+const FormTextInput = props => {
   const classes = new useStyles();
   const handleChange = event => {
     props.handleURLChange(event.target.value)
@@ -45,7 +45,8 @@ let FormTextInput = (props) => {
 };
 
 FormTextInput.propTypes = {
-  handleURLChange: PropTypes.func.isRequired
+  handleURLChange: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
 };
 
 export default FormTextInput;

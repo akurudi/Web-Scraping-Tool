@@ -5,18 +5,13 @@ export default [
     checked: true
   },
   {
-    value: "keywords",
-    label: "Meta Keywords",
+    value: "hreflangs",
+    label: "Hreflangs",
     checked: true
   },
   {
-    value: "description",
-    label: "Meta Description",
-    checked: true
-  },
-  {
-    value: "title",
-    label: "Title",
+    value: "opengraph",
+    label: "Open Graph",
     checked: true
   },
   {
@@ -25,13 +20,18 @@ export default [
     checked: false
   },
   {
-    value: "hreflangs",
-    label: "Hreflangs",
-    checked: false
+    value: "title",
+    label: "Title",
+    checked: true
   },
   {
-    value: "links",
-    label: "Broken Links",
+    value: "description",
+    label: "Meta Description",
+    checked: true
+  },
+  {
+    value: "keywords",
+    label: "Meta Keywords",
     checked: false
   }
 ];

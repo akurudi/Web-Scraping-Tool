@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import PropTypes from "prop-types";
 import {
   Switch,
   FormGroup,
@@ -21,7 +22,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-let FormSwitch = (props) => {
+const FormSwitch = props => {
   const initSwitchState = {};
   switchValues.forEach(elem => {
     initSwitchState[elem.value] = elem.checked
@@ -52,5 +53,9 @@ let FormSwitch = (props) => {
     </FormControl>
   );
 };
+
+FormSwitch.propTypes = {
+  handleFeatureChange: PropTypes.func.isRequired
+}
 
 export default FormSwitch;

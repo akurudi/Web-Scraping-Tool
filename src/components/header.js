@@ -1,7 +1,7 @@
 import React from "react";
 import { withStyles, makeStyles } from "@material-ui/core/styles";
 import { AppBar, Toolbar, Typography, Paper } from "@material-ui/core";
-import PageviewIcon from '@material-ui/icons/Pageview';
+import PageviewIcon from "@material-ui/icons/Pageview";
 
 const PaperContainer = withStyles(theme => ({
   root: {
@@ -28,11 +28,15 @@ export default function ButtonAppBar() {
   const classes = useStyles();
   return (
     <PaperContainer elevation={20}>
-      <AppBar bgcolor="primary.secondary" position="static" className={classes.root}>
+      <AppBar
+        bgcolor="primary.secondary"
+        position="static"
+        className={classes.root}
+      >
         <Toolbar>
           <PageviewIcon className={classes.pageviewIcon} />
           <Typography variant="h6" className={classes.title}>
-            SEO Tool
+            Web Scraping Tool
           </Typography>
         </Toolbar>
       </AppBar>
