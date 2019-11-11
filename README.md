@@ -1,68 +1,49 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Web Scraping Tool
 
-## Available Scripts
+A tool that can scrape a given URL for useful content like canoncial tags, hreflangs, open graph tags and so on. It uses an API server hosted hosted on heroku: https://webscraper-api.herokuapp.com to make it's requests. More information on the API server can be found here: [Web Scraping API](https://github.com/akurudi/Web-Scraping-API).
 
-In the project directory, you can run:
+Full list of features provided by this app are:
 
-### `yarn start`
+1. Canonical
+2. Hreflangs
+3. Headings (H1, H2 and H3)
+4. Open Graph
+5. Title
+6. Meta Description
+7. Meta Keywords
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
+You can install project dependacies using either `npm` or `yarn`.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Usage
 
-### `yarn test`
+### App Configuration
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Endpoint for API is set in `/src/utils/apiEndpoint.js`. By default, it uses https://webscraper-api.herokuapp.com from [Web Scraping API](https://github.com/akurudi/Web-Scraping-API).
 
-### `yarn build`
+Features/Options provided in the app are configured in `/src/utils/switchConfig.js`. This contains an array of objects which that are used to render the "Select Features" section of the app. The order in which the objects appear in the array is the same order in which they are rendered in the app.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Example object from `/src/utils/switchConfig.js`
+```
+{
+  value: "canonical", //Value assigned to this control in the app.
+  label: "Canonical", //Label given for this option in the UI.
+  checked: true //Wheather to enable or disbale this option by default.
+}
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Running The App
+This app is built using [Create React App](https://github.com/facebook/create-react-app) so, all default scripts apply.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+"scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+}
+```
 
-### `yarn eject`
+## Theming
+App is built using [Material UI](https://material-ui.com/) components. Theme configuration for app is done using a `<ThemeProvider>` that accepts a `theme` property. You can customize the theme by editing `src/utils/theme.js`.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
