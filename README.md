@@ -12,6 +12,11 @@ Full list of features provided by this app are:
 6. Meta Description
 7. Meta Keywords
 
+## Tech Stack
+1. ReactJS
+2. MaterialUI
+3. Zeit Now
+
 ## Installation
 You can install project dependacies using either `npm` or `yarn`.
 
@@ -21,7 +26,7 @@ You can install project dependacies using either `npm` or `yarn`.
 
 Endpoint for API is set in `/src/utils/apiEndpoint.js`. By default, it uses https://webscraper-api.herokuapp.com from [Web Scraping API](https://github.com/akurudi/Web-Scraping-API).
 
-Features/Options provided in the app are configured in `/src/utils/switchConfig.js`. This contains an array of objects which that are used to render the "Select Features" section of the app. The order in which the objects appear in the array is the same order in which they are rendered in the app.
+Features/Options provided in the app are configured in `/src/utils/switchConfig.js`. This contains an array of objects that are used to render the "Select Features" section of the app. The order in which the objects appear in array is the same order in which they are rendered in the app.
 
 Example object from `/src/utils/switchConfig.js`
 ```
