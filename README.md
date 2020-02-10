@@ -1,6 +1,6 @@
 # Web Scraping Tool
 
-A tool that can scrape a given URL for useful content like canoncial tags, hreflangs, open graph tags and so on. It uses an API server hosted hosted on heroku: https://webscraper-api.herokuapp.com to make it's requests. More information on the API server can be found here: [Web Scraping API](https://github.com/akurudi/Web-Scraping-API).
+A tool that can scrape a given URL for useful content like canonical tags, hreflangs, open graph tags and so on. It uses an API server hosted on heroku: https://webscraper-api.herokuapp.com to make it's requests. More information on the API server can be found here: [Web Scraping API](https://github.com/akurudi/Web-Scraping-API).
 
 Full list of features provided by this app are:
 
