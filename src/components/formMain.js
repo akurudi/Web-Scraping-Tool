@@ -20,14 +20,8 @@ const FormMain = props => {
     setLoading(true);
     e.preventDefault();
     const postData = { url, ...features };
-    fetch(apiEndpoint.url + "/api/all/", {
-      method: "POST",
-      cache: "no-cache",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(postData)
-    })
+    let queryParams = new URLSearchParams(postData);
+    fetch(`${apiEndpoint.url}/api/all/?${queryParams}`)
       .then(response => response.json())
       .then(data => {
         if (data.error) {
@@ -47,6 +41,7 @@ const FormMain = props => {
         setLoading(false);
       })
       .catch(err => {
+        console.log(err)
         setFeedback({
           show: true,
           success: false,
